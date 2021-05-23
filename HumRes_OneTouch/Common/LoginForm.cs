@@ -35,7 +35,10 @@ namespace UI_HumRes_OneTouch
         private void loginButton_Click(object sender, EventArgs e)
         {
             this.authorized = true;
-            this.role = "HR";
+            if(email.Text.IndexOf("hr") != -1)
+            {
+                this.role = "HR";
+            }
             this.Close();
         }
     }

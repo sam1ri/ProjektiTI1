@@ -88,12 +88,17 @@ namespace UI_HumRes_OneTouch
         private void OnEmployeesLinkClick(object sender, EventArgs e)
         {
             mainPanel.Controls.Clear();
-            HR.s employeesForm = new HR.s();
+            HR.Employees employeesForm = new HR.Employees();
             employeesForm.TopLevel = false;
             employeesForm.Parent = mainPanel;
             employeesForm.Dock = DockStyle.Fill;
             employeesForm.FormBorderStyle = FormBorderStyle.None;
             employeesForm.Show();
+        }
+
+        private void OnLogoutButtonClick(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

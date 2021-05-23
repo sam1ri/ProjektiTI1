@@ -1,7 +1,7 @@
 ﻿
 namespace UI_HumRes_OneTouch.HR
 {
-    partial class s
+    partial class Employees
     {
         /// <summary>
         /// Required designer variable.

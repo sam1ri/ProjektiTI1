@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace UI_HumRes_OneTouch.HR
 {
-    public partial class s : Form
+    public partial class Employees : Form
     {
-        public s()
+        public Employees()
         {
             InitializeComponent();
             this.FillListData();

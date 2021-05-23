@@ -30,10 +30,10 @@ namespace UI_HumRes_OneTouch
         private void InitializeComponent()
         {
             this.sidebar = new System.Windows.Forms.Panel();
-            this.HolidaysLink = new System.Windows.Forms.Button();
-            this.employeesLink = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.ProfileLink = new System.Windows.Forms.Button();
+            this.employeesLink = new System.Windows.Forms.Button();
+            this.HolidaysLink = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.sidebar.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +42,7 @@ namespace UI_HumRes_OneTouch
             // 
             this.sidebar.BackColor = System.Drawing.SystemColors.Highlight;
             this.sidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sidebar.Controls.Add(this.button1);
+            this.sidebar.Controls.Add(this.logoutButton);
             this.sidebar.Controls.Add(this.ProfileLink);
             this.sidebar.Controls.Add(this.employeesLink);
             this.sidebar.Controls.Add(this.HolidaysLink);
@@ -52,22 +52,38 @@ namespace UI_HumRes_OneTouch
             this.sidebar.Size = new System.Drawing.Size(153, 571);
             this.sidebar.TabIndex = 2;
             // 
-            // HolidaysLink
+            // logoutButton
             // 
-            this.HolidaysLink.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HolidaysLink.FlatAppearance.BorderSize = 0;
-            this.HolidaysLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HolidaysLink.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.HolidaysLink.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.HolidaysLink.Location = new System.Drawing.Point(0, 0);
-            this.HolidaysLink.Name = "HolidaysLink";
-            this.HolidaysLink.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.HolidaysLink.Size = new System.Drawing.Size(151, 47);
-            this.HolidaysLink.TabIndex = 0;
-            this.HolidaysLink.Text = "Holidays";
-            this.HolidaysLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HolidaysLink.UseVisualStyleBackColor = true;
-            this.HolidaysLink.Click += new System.EventHandler(this.OnHolidaysLinkClick);
+            this.logoutButton.FlatAppearance.BorderSize = 0;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.logoutButton.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.logoutButton.Location = new System.Drawing.Point(-1, 523);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.logoutButton.Size = new System.Drawing.Size(153, 47);
+            this.logoutButton.TabIndex = 0;
+            this.logoutButton.Text = "Exit";
+            this.logoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.OnLogoutButtonClick);
+            // 
+            // ProfileLink
+            // 
+            this.ProfileLink.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProfileLink.FlatAppearance.BorderSize = 0;
+            this.ProfileLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProfileLink.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ProfileLink.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.ProfileLink.Location = new System.Drawing.Point(0, 94);
+            this.ProfileLink.Name = "ProfileLink";
+            this.ProfileLink.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.ProfileLink.Size = new System.Drawing.Size(151, 47);
+            this.ProfileLink.TabIndex = 0;
+            this.ProfileLink.Text = "Profile";
+            this.ProfileLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProfileLink.UseVisualStyleBackColor = true;
+            this.ProfileLink.Click += new System.EventHandler(this.OnProfileLinkClick);
             // 
             // employeesLink
             // 
@@ -86,38 +102,22 @@ namespace UI_HumRes_OneTouch
             this.employeesLink.UseVisualStyleBackColor = true;
             this.employeesLink.Click += new System.EventHandler(this.OnEmployeesLinkClick);
             // 
-            // button1
+            // HolidaysLink
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(-1, 523);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(153, 47);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Log out";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.OnProfileLinkClick);
-            // 
-            // ProfileLink
-            // 
-            this.ProfileLink.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ProfileLink.FlatAppearance.BorderSize = 0;
-            this.ProfileLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProfileLink.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ProfileLink.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.ProfileLink.Location = new System.Drawing.Point(0, 94);
-            this.ProfileLink.Name = "ProfileLink";
-            this.ProfileLink.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.ProfileLink.Size = new System.Drawing.Size(151, 47);
-            this.ProfileLink.TabIndex = 0;
-            this.ProfileLink.Text = "Profile";
-            this.ProfileLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProfileLink.UseVisualStyleBackColor = true;
-            this.ProfileLink.Click += new System.EventHandler(this.OnProfileLinkClick);
+            this.HolidaysLink.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HolidaysLink.FlatAppearance.BorderSize = 0;
+            this.HolidaysLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HolidaysLink.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.HolidaysLink.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.HolidaysLink.Location = new System.Drawing.Point(0, 0);
+            this.HolidaysLink.Name = "HolidaysLink";
+            this.HolidaysLink.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.HolidaysLink.Size = new System.Drawing.Size(151, 47);
+            this.HolidaysLink.TabIndex = 0;
+            this.HolidaysLink.Text = "Holidays";
+            this.HolidaysLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HolidaysLink.UseVisualStyleBackColor = true;
+            this.HolidaysLink.Click += new System.EventHandler(this.OnHolidaysLinkClick);
             // 
             // mainPanel
             // 
@@ -154,6 +154,6 @@ namespace UI_HumRes_OneTouch
         private System.Windows.Forms.Button HolidaysLink;
         private System.Windows.Forms.Button ProfileLink;
         private System.Windows.Forms.Button employeesLink;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button logoutButton;
     }
 }
