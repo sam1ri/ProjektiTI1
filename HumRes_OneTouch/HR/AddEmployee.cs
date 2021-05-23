@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using BL_HumanRes_OneTouch;
+using BO_HumRes_OneTouch;
 
 namespace UI_HumRes_OneTouch.HR
 {
@@ -74,7 +76,16 @@ namespace UI_HumRes_OneTouch.HR
             string salary = this.salary.Text;
             string email = this.email.Text;
             string password = this.password.Text;
-
+            DateTime birthdate = this.dateTimePicker1.Value;
+            EmployeeBL employee = new EmployeeBL();
+            if (
+                    employee.AddEmployee(
+                    new EmployeeBO(firstName, double.Parse(salary), lastName, birthdate, gender, email, password, 2)
+                ))
+            {
+                this.Parent.Hide();
+            }
+            
 
         }
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BO_HumRes_OneTouch
 {
-    class HRBO : Base
+    public class EmployeeBO : Base
     {
         private string _name;
         private string _lastName;
@@ -68,7 +68,7 @@ namespace BO_HumRes_OneTouch
             {
                 if (value != "")
                 {
-                    _lastName = value;
+                    _password = value;
                 }
                 else
                 {
@@ -82,7 +82,7 @@ namespace BO_HumRes_OneTouch
             get { return _salary; }
             set
             {
-                if (value <= 0)
+                if (value > 0) // value nket rast osht 100
                 {
                     _salary = value;
                 }
@@ -94,12 +94,13 @@ namespace BO_HumRes_OneTouch
         }
 
         public DateTime Birthdate { get; set; }
-        public bool Gender { get; set; }
+        public string Gender { get; set; }
+        public int RoleId { get; set; }
 
-        public HRBO(int employeeId, string name, double salary, string lastName, DateTime birthdate, bool gender, string email, string password)
+        public EmployeeBO(string name, double salary, string lastName, DateTime birthdate, string gender, string email, string password, int roleId)
         {
 
-            EmployeeId = employeeId;
+            //EmployeeId = employeeId;
             Name = name;
             Lastname = lastName;
             Birthdate = birthdate;
@@ -107,6 +108,7 @@ namespace BO_HumRes_OneTouch
             Email = email;
             Salary = salary;
             Password = password;
+            RoleId = roleId;
         }
     }
 }

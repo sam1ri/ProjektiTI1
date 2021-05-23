@@ -98,7 +98,7 @@ namespace UI_HumRes_OneTouch.HR
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView employeesDataGrid;
+        public System.Windows.Forms.DataGridView employeesDataGrid;
         private System.Windows.Forms.Button addNew;
         private System.Windows.Forms.Button addEmployeeButton;
     }

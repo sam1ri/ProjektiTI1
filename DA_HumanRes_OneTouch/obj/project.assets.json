@@ -229,6 +229,16 @@
             "rid": "win"
           }
         }
+      },
+      "BO_HumRes_OneTouch/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/BO_HumRes_OneTouch.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BO_HumRes_OneTouch.dll": {}
+        }
       }
     }
   },
@@ -742,10 +752,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BO_HumRes_OneTouch/1.0.0": {
+      "type": "project",
+      "path": "../BO_HumRes_OneTouch/BO_HumRes_OneTouch.csproj",
+      "msbuildProject": "../BO_HumRes_OneTouch/BO_HumRes_OneTouch.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "BO_HumRes_OneTouch >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 5.0.0",
       "System.Data.SqlClient >= 4.8.2"
     ]
@@ -776,7 +792,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Samiri\\source\\repos\\HumRes_OneTouch\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj": {
+              "projectPath": "C:\\Users\\Samiri\\source\\repos\\HumRes_OneTouch\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

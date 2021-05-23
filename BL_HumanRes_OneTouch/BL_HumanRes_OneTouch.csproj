@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BO_HumRes_OneTouch\BO_HumRes_OneTouch.csproj" />
     <ProjectReference Include="..\DA_HumanRes_OneTouch\DA_HumanRes_OneTouch.csproj" />
   </ItemGroup>
 
