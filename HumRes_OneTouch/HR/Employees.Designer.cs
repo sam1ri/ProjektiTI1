@@ -55,6 +55,7 @@ namespace UI_HumRes_OneTouch.HR
             this.employeesDataGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employeesDataGrid.MultiSelect = false;
             this.employeesDataGrid.Name = "employeesDataGrid";
+            this.employeesDataGrid.ReadOnly = true;
             this.employeesDataGrid.RowHeadersWidth = 51;
             this.employeesDataGrid.RowTemplate.Height = 25;
             this.employeesDataGrid.Size = new System.Drawing.Size(863, 596);
@@ -85,7 +86,7 @@ namespace UI_HumRes_OneTouch.HR
             this.Controls.Add(this.addEmployeeButton);
             this.Controls.Add(this.employeesDataGrid);
             this.Controls.Add(this.label1);
-            this.Name = "s";
+            this.Name = "Employees";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();

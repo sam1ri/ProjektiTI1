@@ -13,9 +13,12 @@ namespace UI_HumRes_OneTouch.HR
     public partial class AddEmployee : Form
     {
 
-        public AddEmployee()
+        private Employees parent;
+
+        public AddEmployee(Employees f)
         {
             InitializeComponent();
+            parent = f;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -83,7 +86,9 @@ namespace UI_HumRes_OneTouch.HR
                     new EmployeeBO(firstName, double.Parse(salary), lastName, birthdate, gender, email, password, 2)
                 ))
             {
-                this.Parent.Hide();
+                EmployeeBL emp = new EmployeeBL();
+                this.parent.employeesDataGrid.DataSource = emp.FillEmployeeTable();
+                this.Close();
             }
             
 
