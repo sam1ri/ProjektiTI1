@@ -7,6 +7,9 @@
     <Compile Update="Employee\Profile.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="HR\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="HR\Employees.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -49,5 +49,11 @@ namespace UI_HumRes_OneTouch.HR
         {
 
         }
+
+        private void OnAddEmployeeButtonClick(object sender, EventArgs e)
+        {
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.Show();
+        }
     }
 }

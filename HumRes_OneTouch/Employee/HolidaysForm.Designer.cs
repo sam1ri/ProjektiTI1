@@ -30,7 +30,8 @@ namespace UI_HumRes_OneTouch.Employee
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.holidayDataGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.holidayDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -43,30 +44,29 @@ namespace UI_HumRes_OneTouch.Employee
             this.label1.TabIndex = 1;
             this.label1.Text = "Holidays";
             // 
-            // monthCalendar1
+            // holidayDataGrid
             // 
-            this.monthCalendar1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.monthCalendar1.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
-            this.monthCalendar1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.monthCalendar1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.monthCalendar1.Location = new System.Drawing.Point(28, 101);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 2;
-            this.monthCalendar1.TitleBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.monthCalendar1.TitleForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.monthCalendar1.TrailingForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            this.holidayDataGrid.AllowUserToAddRows = false;
+            this.holidayDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.holidayDataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.holidayDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.holidayDataGrid.Location = new System.Drawing.Point(22, 82);
+            this.holidayDataGrid.Name = "holidayDataGrid";
+            this.holidayDataGrid.RowTemplate.Height = 25;
+            this.holidayDataGrid.Size = new System.Drawing.Size(757, 437);
+            this.holidayDataGrid.TabIndex = 2;
             // 
             // HolidaysForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(865, 605);
-            this.Controls.Add(this.monthCalendar1);
+            this.ClientSize = new System.Drawing.Size(805, 548);
+            this.Controls.Add(this.holidayDataGrid);
             this.Controls.Add(this.label1);
             this.Name = "HolidaysForm";
             this.Text = "Holidays";
+            ((System.ComponentModel.ISupportInitialize)(this.holidayDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -74,6 +74,6 @@ namespace UI_HumRes_OneTouch.Employee
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DataGridView holidayDataGrid;
     }
 }

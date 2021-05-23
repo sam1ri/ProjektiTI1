@@ -39,7 +39,7 @@ namespace UI_HumRes_OneTouch.HR
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(15, 17);
+            this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 50);
             this.label1.TabIndex = 0;
@@ -75,6 +75,7 @@ namespace UI_HumRes_OneTouch.HR
             this.addEmployeeButton.TabIndex = 2;
             this.addEmployeeButton.Text = "Add New";
             this.addEmployeeButton.UseVisualStyleBackColor = false;
+            this.addEmployeeButton.Click += new System.EventHandler(this.OnAddEmployeeButtonClick);
             // 
             // Employees
             // 
@@ -84,8 +85,7 @@ namespace UI_HumRes_OneTouch.HR
             this.Controls.Add(this.addEmployeeButton);
             this.Controls.Add(this.employeesDataGrid);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Employees";
+            this.Name = "s";
             this.Text = "Employees";
             this.Load += new System.EventHandler(this.Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();
