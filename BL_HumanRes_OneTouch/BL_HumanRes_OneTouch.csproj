@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DA_HumanRes_OneTouch\DA_HumanRes_OneTouch.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using BL_HumanRes_OneTouch;
 
 namespace UI_HumRes_OneTouch.HR
 {
@@ -18,20 +19,25 @@ namespace UI_HumRes_OneTouch.HR
 
         private void FillListData()
         {
-            DataSet dataSet = new DataSet();
+            //DataSet dataSet = new DataSet();
 
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("ID");
-            dataTable.Columns[0].ReadOnly = true;
-            dataTable.Columns.Add("First Name");
-            dataTable.Columns.Add("Last Name");
 
-            dataTable.Rows.Add(new object[] { "1", "James", "Bond"});
 
-            dataSet.Tables.Add(dataTable);
+            //DataTable dataTable = new DataTable();
+            //dataTable.Columns.Add("ID");
+            //dataTable.Columns[0].ReadOnly = true;
+            //dataTable.Columns.Add("First Name");
+            //dataTable.Columns.Add("Last Name");
 
-            employeesDataGrid.DataSource = dataSet.Tables[0].DefaultView;
+            //dataTable.Rows.Add(new object[] { "1", "James", "Bond"});
 
+            //dataSet.Tables.Add(dataTable);
+
+            //employeesDataGrid.DataSource = dataSet.Tables[0].DefaultView;
+
+            EmployeeBL emp = new EmployeeBL();
+            employeesDataGrid.DataSource = emp.FillEmployeeTable();
+            Console.WriteLine();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

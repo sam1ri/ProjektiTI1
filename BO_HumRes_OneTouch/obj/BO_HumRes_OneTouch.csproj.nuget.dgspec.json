@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\sam1ri\\ProjektiTI1\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj": {}
+    "C:\\Users\\Samiri\\source\\repos\\HumRes_OneTouch\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\sam1ri\\ProjektiTI1\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj": {
+    "C:\\Users\\Samiri\\source\\repos\\HumRes_OneTouch\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\sam1ri\\ProjektiTI1\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj",
+        "projectUniqueName": "C:\\Users\\Samiri\\source\\repos\\HumRes_OneTouch\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj",
         "projectName": "BO_HumRes_OneTouch",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\sam1ri\\ProjektiTI1\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Source\\Repos\\sam1ri\\ProjektiTI1\\BO_HumRes_OneTouch\\obj\\",
+        "projectPath": "C:\\Users\\Samiri\\source\\repos\\HumRes_OneTouch\\BO_HumRes_OneTouch\\BO_HumRes_OneTouch.csproj",
+        "packagesPath": "C:\\Users\\Samiri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Samiri\\source\\repos\\HumRes_OneTouch\\BO_HumRes_OneTouch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Samiri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -53,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

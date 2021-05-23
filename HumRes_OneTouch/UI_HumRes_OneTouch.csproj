@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BL_HumanRes_OneTouch\BL_HumanRes_OneTouch.csproj" />
+  </ItemGroup>
+
 </Project>
