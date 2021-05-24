@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using BL_HumanRes_OneTouch;
+using BO_HumRes_OneTouch;
 using System.Windows.Forms;
 
 namespace UI_HumRes_OneTouch
@@ -11,7 +13,7 @@ namespace UI_HumRes_OneTouch
     public partial class LoginForm : Form
     {
         public bool authorized = false;
-        public string role = "";
+        public int role;
         public LoginForm()
         {
             InitializeComponent();
@@ -34,12 +36,23 @@ namespace UI_HumRes_OneTouch
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            string email = this.email.Text;
+            string password = this.password.Text;
             this.authorized = true;
-            if(email.Text.IndexOf("hr") != -1)
+            EmployeeBL emp = new EmployeeBL();
+            EmployeeBO employee = emp.Authenticate(email.Trim(), password);
+
+            if (employee != null)
             {
-                this.role = "HR";
+                this.authorized = true;
+                this.role = employee.RoleId;
+                this.Close();
             }
-            this.Close();
+            else
+            {
+                this.errorLabel.Text = "Invalid email or password!";
+                this.errorLabel.Visible = true;
+            }
         }
     }
 }

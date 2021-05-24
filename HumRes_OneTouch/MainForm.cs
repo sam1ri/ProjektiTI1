@@ -6,7 +6,7 @@ namespace UI_HumRes_OneTouch
     public partial class MainForm : Form
     {
         private bool authorized = false;
-        private string role = "";
+        private int role;
         public MainForm()
         {
             InitializeComponent();
@@ -57,7 +57,7 @@ namespace UI_HumRes_OneTouch
 
         private void SetSidebarLinks()
         {
-            if(role != "HR")
+            if(role != 1)
             {
                 employeesLink.Visible = false;
             }

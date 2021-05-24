@@ -20,9 +20,19 @@ namespace BL_HumanRes_OneTouch
             return empDA.GetAllEmployee();
         }
 
+        public DataTable FillHolidatsTable()
+        {
+            return empDA.GetAllHolidays();
+        }
+
         public bool AddEmployee(EmployeeBO emp)
         {
             return empDA.InsertEmployee(emp);
+        }
+
+        public EmployeeBO Authenticate(string Email, string Password)
+        {
+            return empDA.Login(Email, Password);
         }
 
     }

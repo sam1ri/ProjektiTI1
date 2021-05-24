@@ -28,6 +28,25 @@ namespace DA_HumanRes_OneTouch
             }
         }
 
+        public DataTable GetAllHolidays()
+        {
+            try
+            {
+                using (DbConnection.conn = new SqlConnection(DbConnection.conString))
+                {
+                    DbConnection.da = new SqlDataAdapter("AllHolidays", DbConnection.conn);
+                    DataTable dTable = new DataTable();
+                    DbConnection.da.Fill(dTable);
+
+                    return dTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public bool InsertEmployee(EmployeeBO emp)
         {
             try
@@ -58,5 +77,51 @@ namespace DA_HumanRes_OneTouch
             }
         }
 
+        public EmployeeBO Login(string email, string password)
+        {
+            DataSet ds;
+            EmployeeBO emp;
+
+            try
+            {
+                using (DbConnection.conn = new SqlConnection(DbConnection.conString))
+                {
+                    DbConnection.conn.Open();
+                    DbConnection.cmd = new SqlCommand("Login", DbConnection.conn);
+                    DbConnection.cmd.CommandType = CommandType.StoredProcedure;
+                    DbConnection.cmd.Parameters.AddWithValue("@Email", email);
+                    DbConnection.cmd.Parameters.AddWithValue("@Password", password);
+
+                    DbConnection.da = new SqlDataAdapter(DbConnection.cmd);
+                    ds = new DataSet();
+                    DbConnection.da.Fill(ds);
+
+                    int rId = int.Parse(Convert.ToString(ds.Tables[0].Rows[0]["Id"]));
+                    string rName = Convert.ToString(ds.Tables[0].Rows[0]["Name"]);
+                    string rLastName = Convert.ToString(ds.Tables[0].Rows[0]["LastName"]);
+                    DateTime rBirthDate = DateTime.Parse(Convert.ToString(ds.Tables[0].Rows[0]["Birthdate"]));
+                    string rEmail = Convert.ToString(ds.Tables[0].Rows[0]["Email"]);
+                    string rGender = Convert.ToString(ds.Tables[0].Rows[0]["Gender"]);
+                    float rSalary = float.Parse(Convert.ToString(ds.Tables[0].Rows[0]["Salary"]));
+                    int rRoleId = int.Parse(Convert.ToString(ds.Tables[0].Rows[0]["RoleId"]));
+                    emp = new EmployeeBO(rId, rName, rSalary, rLastName, rBirthDate, rGender, rEmail, null, rRoleId);
+
+                    GlobalModel.Name = rName;
+                    GlobalModel.LastName = rLastName;
+                    GlobalModel.BirthDate = rBirthDate;
+                    GlobalModel.Salary = rSalary;
+                    GlobalModel.Gender = rGender;
+                    GlobalModel.Email= rEmail;
+                    return emp;
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

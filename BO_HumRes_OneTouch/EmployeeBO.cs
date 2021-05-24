@@ -110,5 +110,19 @@ namespace BO_HumRes_OneTouch
             Password = password;
             RoleId = roleId;
         }
+        public EmployeeBO(int id, string name, double salary, string lastName, DateTime birthdate, string gender, string email, string password, int roleId)
+        {
+
+            EmployeeId = id;
+            Name = name;
+            Lastname = lastName;
+            Birthdate = birthdate;
+            Gender = gender;
+            Email = email;
+            Salary = salary;
+            Password = password;
+            RoleId = roleId;
+        }
+
     }
 }
