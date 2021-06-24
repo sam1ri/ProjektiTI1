@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using BL_HumanRes_OneTouch;
 
@@ -37,7 +38,24 @@ namespace UI_HumRes_OneTouch.HR
 
             EmployeeBL emp = new EmployeeBL();
             employeesDataGrid.DataSource = emp.FillEmployeeTable();
-            Console.WriteLine();
+            employeesDataGrid.AllowUserToAddRows = false;
+            DataGridViewButtonColumn View = new DataGridViewButtonColumn();
+
+            View.Name = "Profile";
+            View.HeaderText = "View Profile";
+            View.Text = "View";
+            View.UseColumnTextForButtonValue = true;
+
+            employeesDataGrid.Columns.Add(View);
+
+            DataGridViewButtonColumn Edit = new DataGridViewButtonColumn();
+
+            Edit.Name = "Edit";
+            Edit.HeaderText = "Edit Profile";
+            Edit.Text = "Edit";
+            Edit.UseColumnTextForButtonValue = true;
+
+            employeesDataGrid.Columns.Add(Edit);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -53,7 +71,7 @@ namespace UI_HumRes_OneTouch.HR
         private void OnAddEmployeeButtonClick(object sender, EventArgs e)
         {
             AddEmployee addEmployee = new AddEmployee(this);
-            addEmployee.Show();
+                addEmployee.ShowDialog(this);
         }
     }
 }

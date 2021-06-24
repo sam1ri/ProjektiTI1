@@ -50,7 +50,7 @@ namespace UI_HumRes_OneTouch
             }
             else
             {
-                this.errorLabel.Text = "Invalid email or password!";
+                this.errorLabel.Text = "Incorrect email or password!";
                 this.errorLabel.Visible = true;
             }
         }

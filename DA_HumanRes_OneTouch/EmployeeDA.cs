@@ -54,20 +54,38 @@ namespace DA_HumanRes_OneTouch
                 using (SqlConnection conn = new SqlConnection(DbConnection.conString))
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("AddEmployee", conn);
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    SqlCommand cmdAddEmp = new SqlCommand("AddEmployee", conn);
+                    cmdAddEmp.CommandType = System.Data.CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@Name", emp.Name);
-                    cmd.Parameters.AddWithValue("@LastName", emp.Lastname);
-                    cmd.Parameters.AddWithValue("@Gender", emp.Gender);
-                    cmd.Parameters.AddWithValue("@Salary", emp.Salary);
-                    cmd.Parameters.AddWithValue("@BirthDate", emp.Birthdate);
-                    cmd.Parameters.AddWithValue("@Email", emp.Email);
-                    cmd.Parameters.AddWithValue("@Password", emp.Password);
-                    cmd.Parameters.AddWithValue("@RoleId", emp.RoleId);
-                    cmd.Parameters.AddWithValue("@LastUpdateByUserId", GlobalModel.UserId);
+                    cmdAddEmp.Parameters.AddWithValue("@Name", emp.Name);
+                    cmdAddEmp.Parameters.AddWithValue("@LastName", emp.Lastname);
+                    cmdAddEmp.Parameters.AddWithValue("@Gender", emp.Gender);
+                    cmdAddEmp.Parameters.AddWithValue("@Salary", emp.Salary);
+                    cmdAddEmp.Parameters.AddWithValue("@BirthDate", emp.Birthdate);
+                    cmdAddEmp.Parameters.AddWithValue("@Email", emp.Email);
+                    cmdAddEmp.Parameters.AddWithValue("@Password", emp.Password);
+                    cmdAddEmp.Parameters.AddWithValue("@RoleId", emp.RoleId);
+                    cmdAddEmp.Parameters.AddWithValue("@LastUpdateByUserId", GlobalModel.UserId);
+                    //cmdAddEmp.ExecuteNonQuery();
 
-                    cmd.ExecuteNonQuery();
+                    int InsertedId = -1;
+
+                    using (SqlDataReader rdr = cmdAddEmp.ExecuteReader()) {
+                        // iterate through results, printing each to console
+                        while (rdr.Read()) {
+                            InsertedId = int.Parse(rdr[0].ToString());
+                        }
+                    }
+
+                    if (InsertedId == -1) {
+                        throw new Exception("Something went wrong!");
+                    }
+                    SqlCommand cmdAddCV = new SqlCommand("AddCV", conn);
+                    cmdAddCV.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmdAddCV.Parameters.AddWithValue("@UserId", InsertedId);
+                    cmdAddCV.Parameters.AddWithValue("@LastUpdateByUserId", GlobalModel.UserId);
+                    cmdAddCV.ExecuteNonQuery();
+
                 }
                 return true;
             }

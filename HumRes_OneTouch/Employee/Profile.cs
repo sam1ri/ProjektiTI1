@@ -27,5 +27,15 @@ namespace UI_HumRes_OneTouch.Employee
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            ViewCV viewCV = new ViewCV(this);
+            viewCV.ShowDialog(this);
+        }
+
+        private void addEmployeeButton_Click(object sender, EventArgs e) {
+            AddCV addCV = new AddCV();
+            addCV.ShowDialog(this);
+        }
     }
 }

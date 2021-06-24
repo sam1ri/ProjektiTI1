@@ -47,6 +47,9 @@ namespace UI_HumRes_OneTouch.HR
             // 
             // employeesDataGrid
             // 
+            this.employeesDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.employeesDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.employeesDataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -58,12 +61,13 @@ namespace UI_HumRes_OneTouch.HR
             this.employeesDataGrid.ReadOnly = true;
             this.employeesDataGrid.RowHeadersWidth = 51;
             this.employeesDataGrid.RowTemplate.Height = 25;
-            this.employeesDataGrid.Size = new System.Drawing.Size(863, 596);
+            this.employeesDataGrid.Size = new System.Drawing.Size(863, 666);
             this.employeesDataGrid.TabIndex = 1;
             this.employeesDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // addEmployeeButton
             // 
+            this.addEmployeeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.addEmployeeButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.addEmployeeButton.FlatAppearance.BorderSize = 0;
             this.addEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -37,23 +37,23 @@ namespace UI_HumRes_OneTouch.Employee
 
             //holidayDataGrid.DataSource = dataSet.Tables[0].DefaultView;
 
-            DataGridViewButtonColumn ApproveBtn = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn ApproveBtn = new DataGridViewButtonColumn();
 
-            ApproveBtn.Name = "Approve";
-            ApproveBtn.HeaderText = "Approve";
-            ApproveBtn.Text = "Approve";
-            ApproveBtn.UseColumnTextForButtonValue = true;
+            //ApproveBtn.Name = "Approve";
+            //ApproveBtn.HeaderText = "Approve";
+            //ApproveBtn.Text = "Approve";
+            //ApproveBtn.UseColumnTextForButtonValue = true;
 
-            DataGridViewButtonColumn Decline = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn Decline = new DataGridViewButtonColumn();
 
-            Decline.Name = "Decline";
-            Decline.HeaderText = "Decline";
-            Decline.Text = "Decline";
-            Decline.UseColumnTextForButtonValue = true;
+            //Decline.Name = "Decline";
+            //Decline.HeaderText = "Decline";
+            //Decline.Text = "Decline";
+            //Decline.UseColumnTextForButtonValue = true;
 
-            //editButton.Width = 60;
-            holidayDataGrid.Columns.Add(ApproveBtn);
-            holidayDataGrid.Columns.Add(Decline);
+            ////editButton.Width = 60;
+            //holidayDataGrid.Columns.Add(ApproveBtn);
+            //holidayDataGrid.Columns.Add(Decline);
         }
 
         private void holidaysCalendar_DateChanged(object sender, DateRangeEventArgs e)
@@ -64,6 +64,16 @@ namespace UI_HumRes_OneTouch.Employee
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
+        }
+
+        private void holidayDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void newRequest_Click(object sender, EventArgs e) {
+            RequestHoliday requestHoliday = new RequestHoliday(this);
+
+            requestHoliday.ShowDialog(this);
         }
     }
 }
