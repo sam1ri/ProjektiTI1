@@ -84,7 +84,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(596, 412);
+            this.label5.Location = new System.Drawing.Point(98, 412);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(174, 41);
             this.label5.TabIndex = 0;
@@ -95,7 +95,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(59, 412);
+            this.label6.Location = new System.Drawing.Point(557, 412);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(213, 41);
             this.label6.TabIndex = 0;
@@ -134,7 +134,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(278, 412);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 41);
+            this.label7.Size = new System.Drawing.Size(239, 41);
             this.label7.TabIndex = 0;
             // 
             // panel1
@@ -163,7 +163,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.label9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.Location = new System.Drawing.Point(776, 412);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(155, 41);
+            this.label9.Size = new System.Drawing.Size(218, 41);
             this.label9.TabIndex = 6;
             // 
             // Contract
@@ -174,6 +174,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.Controls.Add(this.panel1);
             this.Name = "Contract";
             this.Text = "Contract";
+            this.Load += new System.EventHandler(this.loadContract);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

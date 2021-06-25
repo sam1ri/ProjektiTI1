@@ -43,8 +43,9 @@ namespace UI_HumRes_OneTouch.HR {
             this.holidayDataGrid.Name = "holidayDataGrid";
             this.holidayDataGrid.RowHeadersWidth = 51;
             this.holidayDataGrid.RowTemplate.Height = 25;
-            this.holidayDataGrid.Size = new System.Drawing.Size(975, 595);
+            this.holidayDataGrid.Size = new System.Drawing.Size(1544, 970);
             this.holidayDataGrid.TabIndex = 6;
+            this.holidayDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ResponseClick);
             // 
             // label1
             // 
@@ -60,7 +61,7 @@ namespace UI_HumRes_OneTouch.HR {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 680);
+            this.ClientSize = new System.Drawing.Size(1573, 1055);
             this.Controls.Add(this.holidayDataGrid);
             this.Controls.Add(this.label1);
             this.Name = "Holidays";

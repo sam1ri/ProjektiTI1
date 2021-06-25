@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using UI_HumRes_OneTouch.Employee;
 using UI_HumRes_OneTouch.HR;
+using System.Diagnostics;
 
 namespace UI_HumRes_OneTouch
 {
@@ -82,6 +83,7 @@ namespace UI_HumRes_OneTouch
             {
                 employeesLink.Visible = false;
                 contractLink.Visible = true;
+                button1.Visible = false;
                 contractLink.Text = "View Contract";
             }
         }
@@ -113,7 +115,7 @@ namespace UI_HumRes_OneTouch
         private void OnProfileLinkClick(object sender, EventArgs e)
         {
             mainPanel.Controls.Clear();
-            Employee.Profile profileForm = new Employee.Profile();
+            Employee.Profile profileForm = new Employee.Profile(role);
             profileForm.TopLevel = false;
             profileForm.Parent = mainPanel;
             profileForm.Dock = DockStyle.Fill;
@@ -156,6 +158,10 @@ namespace UI_HumRes_OneTouch
                 employeesForm.FormBorderStyle = FormBorderStyle.None;
                 employeesForm.Show();
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e) {
+            System.Diagnostics.Process.Start(@"C:\Users\Samiri\source\repos\HumRes_OneTouch\AdditionalUI\bin\Debug\AdditionalUI.exe");
         }
     }
 }

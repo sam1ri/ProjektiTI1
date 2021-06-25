@@ -124,5 +124,9 @@ namespace BO_HumRes_OneTouch
             RoleId = roleId;
         }
 
+        public EmployeeBO() {
+
+        }
+
     }
 }

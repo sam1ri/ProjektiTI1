@@ -6,7 +6,7 @@ namespace BO_HumRes_OneTouch
 {
     public static class GlobalModel
     {
-        private static int userId = 1; // to be removed the initial value
+        private static int userId; // to be removed the initial value
 
         public static string Name { get; set; }
         public static string LastName { get; set; }

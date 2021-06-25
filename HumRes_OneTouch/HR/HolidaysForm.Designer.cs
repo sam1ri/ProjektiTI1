@@ -59,7 +59,7 @@ namespace UI_HumRes_OneTouch.Employee
             this.holidayDataGrid.Name = "holidayDataGrid";
             this.holidayDataGrid.RowHeadersWidth = 51;
             this.holidayDataGrid.RowTemplate.Height = 25;
-            this.holidayDataGrid.Size = new System.Drawing.Size(894, 609);
+            this.holidayDataGrid.Size = new System.Drawing.Size(1146, 933);
             this.holidayDataGrid.TabIndex = 2;
             this.holidayDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.holidayDataGrid_CellContentClick);
             // 
@@ -71,7 +71,7 @@ namespace UI_HumRes_OneTouch.Employee
             this.newRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newRequest.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.newRequest.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.newRequest.Location = new System.Drawing.Point(741, 61);
+            this.newRequest.Location = new System.Drawing.Point(993, 61);
             this.newRequest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.newRequest.Name = "newRequest";
             this.newRequest.Size = new System.Drawing.Size(167, 40);
@@ -85,7 +85,7 @@ namespace UI_HumRes_OneTouch.Employee
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(920, 731);
+            this.ClientSize = new System.Drawing.Size(1172, 1055);
             this.Controls.Add(this.newRequest);
             this.Controls.Add(this.holidayDataGrid);
             this.Controls.Add(this.label1);

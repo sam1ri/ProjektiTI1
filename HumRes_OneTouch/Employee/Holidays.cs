@@ -14,11 +14,15 @@ namespace UI_HumRes_OneTouch.HR {
             FillHolidayRequests();
         }
 
-        private void FillHolidayRequests() {
+        public void FillDataTable() {
             EmployeeBL emp = new EmployeeBL();
             holidayDataGrid.DataSource = emp.FillHolidatsTable();
-            DataGridViewButtonColumn ApproveBtn = new DataGridViewButtonColumn();
+        }
 
+        private void FillHolidayRequests() {
+
+            FillDataTable();
+            DataGridViewButtonColumn ApproveBtn = new DataGridViewButtonColumn();
             ApproveBtn.Name = "Approve";
             ApproveBtn.HeaderText = "Approve";
             ApproveBtn.Text = "Approve";
@@ -34,6 +38,23 @@ namespace UI_HumRes_OneTouch.HR {
             //editButton.Width = 60;
             holidayDataGrid.Columns.Add(ApproveBtn);
             holidayDataGrid.Columns.Add(Decline);
+        }
+
+        private void ResponseClick(object sender, DataGridViewCellEventArgs e) {
+            var senderGrid = (DataGridView)sender;
+            int holidayId;
+            holidayId = int.Parse(senderGrid.CurrentRow.Cells[2].Value.ToString());
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.ColumnIndex == 0 && e.RowIndex >= 0) {
+                EmployeeBL emp = new EmployeeBL();
+                emp.SetHolidayStatus(holidayId, "Approved");
+                FillDataTable();
+            }
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.ColumnIndex == 1 && e.RowIndex >= 0) {
+                EmployeeBL empBL = new EmployeeBL();
+                empBL.SetHolidayStatus(holidayId, "Declined");
+                FillDataTable();
+            }
         }
     }
 }

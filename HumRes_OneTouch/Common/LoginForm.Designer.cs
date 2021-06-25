@@ -55,24 +55,24 @@ namespace UI_HumRes_OneTouch
             // email
             // 
             this.email.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.email.Location = new System.Drawing.Point(58, 176);
+            this.email.Location = new System.Drawing.Point(57, 186);
             this.email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.email.MinimumSize = new System.Drawing.Size(4, 30);
             this.email.Name = "email";
             this.email.PlaceholderText = "Your email";
-            this.email.Size = new System.Drawing.Size(252, 29);
+            this.email.Size = new System.Drawing.Size(253, 29);
             this.email.TabIndex = 1;
             // 
             // password
             // 
             this.password.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.password.Location = new System.Drawing.Point(58, 244);
+            this.password.Location = new System.Drawing.Point(57, 250);
             this.password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.password.MinimumSize = new System.Drawing.Size(4, 30);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
             this.password.PlaceholderText = "Your password";
-            this.password.Size = new System.Drawing.Size(252, 29);
+            this.password.Size = new System.Drawing.Size(253, 29);
             this.password.TabIndex = 2;
             // 
             // loginButton
@@ -95,7 +95,7 @@ namespace UI_HumRes_OneTouch
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 148);
+            this.label2.Location = new System.Drawing.Point(57, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 20);
             this.label2.TabIndex = 4;
@@ -104,7 +104,7 @@ namespace UI_HumRes_OneTouch
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 220);
+            this.label3.Location = new System.Drawing.Point(57, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 4;
@@ -129,7 +129,7 @@ namespace UI_HumRes_OneTouch
             this.panel1.Controls.Add(this.email);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.loginButton);
-            this.panel1.Location = new System.Drawing.Point(147, 91);
+            this.panel1.Location = new System.Drawing.Point(12, 51);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(351, 450);
             this.panel1.TabIndex = 6;
@@ -138,7 +138,7 @@ namespace UI_HumRes_OneTouch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 713);
+            this.ClientSize = new System.Drawing.Size(563, 547);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

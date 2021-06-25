@@ -28,9 +28,9 @@ namespace UI_HumRes_OneTouch.Employee {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.addEmployeeButton = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEducation = new System.Windows.Forms.DataGridView();
+            this.dgvExperience = new System.Windows.Forms.DataGridView();
+            this.dgvSkills = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,9 +39,9 @@ namespace UI_HumRes_OneTouch.Employee {
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEducation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExperience)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,9 +49,9 @@ namespace UI_HumRes_OneTouch.Employee {
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.addEmployeeButton);
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.dataGridView3);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvEducation);
+            this.panel1.Controls.Add(this.dgvExperience);
+            this.panel1.Controls.Add(this.dgvSkills);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label4);
@@ -61,7 +61,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 718);
+            this.panel1.Size = new System.Drawing.Size(1138, 718);
             this.panel1.TabIndex = 0;
             // 
             // button1
@@ -72,7 +72,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(725, 128);
+            this.button1.Location = new System.Drawing.Point(652, 128);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 35);
@@ -89,7 +89,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button2.Location = new System.Drawing.Point(725, 425);
+            this.button2.Location = new System.Drawing.Point(652, 423);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 35);
@@ -106,7 +106,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.addEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployeeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addEmployeeButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.addEmployeeButton.Location = new System.Drawing.Point(260, 128);
+            this.addEmployeeButton.Location = new System.Drawing.Point(979, 128);
             this.addEmployeeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addEmployeeButton.Name = "addEmployeeButton";
             this.addEmployeeButton.Size = new System.Drawing.Size(140, 35);
@@ -115,47 +115,47 @@ namespace UI_HumRes_OneTouch.Employee {
             this.addEmployeeButton.UseVisualStyleBackColor = false;
             this.addEmployeeButton.Click += new System.EventHandler(this.addEmployeeButton_Click);
             // 
-            // dataGridView2
+            // dgvEducation
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(425, 170);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(440, 239);
-            this.dataGridView2.TabIndex = 3;
+            this.dgvEducation.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvEducation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEducation.Location = new System.Drawing.Point(19, 170);
+            this.dgvEducation.Name = "dgvEducation";
+            this.dgvEducation.ReadOnly = true;
+            this.dgvEducation.RowHeadersWidth = 51;
+            this.dgvEducation.RowTemplate.Height = 29;
+            this.dgvEducation.Size = new System.Drawing.Size(773, 239);
+            this.dgvEducation.TabIndex = 3;
             // 
-            // dataGridView3
+            // dgvExperience
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(19, 465);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 29;
-            this.dataGridView3.Size = new System.Drawing.Size(846, 253);
-            this.dataGridView3.TabIndex = 3;
+            this.dgvExperience.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvExperience.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExperience.Location = new System.Drawing.Point(19, 465);
+            this.dgvExperience.Name = "dgvExperience";
+            this.dgvExperience.ReadOnly = true;
+            this.dgvExperience.RowHeadersWidth = 51;
+            this.dgvExperience.RowTemplate.Height = 29;
+            this.dgvExperience.Size = new System.Drawing.Size(773, 253);
+            this.dgvExperience.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgvSkills
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 170);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(381, 239);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvSkills.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvSkills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSkills.Location = new System.Drawing.Point(806, 170);
+            this.dgvSkills.Name = "dgvSkills";
+            this.dgvSkills.ReadOnly = true;
+            this.dgvSkills.RowHeadersWidth = 51;
+            this.dgvSkills.RowTemplate.Height = 29;
+            this.dgvSkills.Size = new System.Drawing.Size(313, 548);
+            this.dgvSkills.TabIndex = 3;
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(534, 22);
+            this.textBox1.Location = new System.Drawing.Point(729, 22);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -177,7 +177,7 @@ namespace UI_HumRes_OneTouch.Employee {
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(425, 128);
+            this.label4.Location = new System.Drawing.Point(19, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 28);
             this.label4.TabIndex = 0;
@@ -197,7 +197,7 @@ namespace UI_HumRes_OneTouch.Employee {
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(425, 25);
+            this.label2.Location = new System.Drawing.Point(620, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 28);
             this.label2.TabIndex = 0;
@@ -207,7 +207,7 @@ namespace UI_HumRes_OneTouch.Employee {
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(19, 128);
+            this.label3.Location = new System.Drawing.Point(806, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 28);
             this.label3.TabIndex = 0;
@@ -227,7 +227,7 @@ namespace UI_HumRes_OneTouch.Employee {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 742);
+            this.ClientSize = new System.Drawing.Size(1162, 742);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -237,9 +237,9 @@ namespace UI_HumRes_OneTouch.Employee {
             this.Text = "CV";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEducation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExperience)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSkills)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,9 +251,9 @@ namespace UI_HumRes_OneTouch.Employee {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEducation;
+        private System.Windows.Forms.DataGridView dgvExperience;
+        private System.Windows.Forms.DataGridView dgvSkills;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;

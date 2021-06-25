@@ -18,27 +18,17 @@ namespace UI_HumRes_OneTouch.HR
             this.FillListData();
         }
 
+        public void FillListDynamic() {
+            EmployeeBL emp = new EmployeeBL();
+            employeesDataGrid.DataSource = emp.FillEmployeeTable();
+            employeesDataGrid.AllowUserToAddRows = false;
+        }
+
         private void FillListData()
         {
             //DataSet dataSet = new DataSet();
 
-
-
-            //DataTable dataTable = new DataTable();
-            //dataTable.Columns.Add("ID");
-            //dataTable.Columns[0].ReadOnly = true;
-            //dataTable.Columns.Add("First Name");
-            //dataTable.Columns.Add("Last Name");
-
-            //dataTable.Rows.Add(new object[] { "1", "James", "Bond"});
-
-            //dataSet.Tables.Add(dataTable);
-
-            //employeesDataGrid.DataSource = dataSet.Tables[0].DefaultView;
-
-            EmployeeBL emp = new EmployeeBL();
-            employeesDataGrid.DataSource = emp.FillEmployeeTable();
-            employeesDataGrid.AllowUserToAddRows = false;
+            FillListDynamic();
             DataGridViewButtonColumn View = new DataGridViewButtonColumn();
 
             View.Name = "Profile";
@@ -50,9 +40,9 @@ namespace UI_HumRes_OneTouch.HR
 
             DataGridViewButtonColumn Edit = new DataGridViewButtonColumn();
 
-            Edit.Name = "Edit";
-            Edit.HeaderText = "Edit Profile";
-            Edit.Text = "Edit";
+            Edit.Name = "Delete";
+            Edit.HeaderText = "Action Delete";
+            Edit.Text = "Delete";
             Edit.UseColumnTextForButtonValue = true;
 
             employeesDataGrid.Columns.Add(Edit);
@@ -60,7 +50,23 @@ namespace UI_HumRes_OneTouch.HR
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var senderGrid = (DataGridView)sender;
+            int userId;
+            userId = int.Parse(senderGrid.CurrentRow.Cells[2].Value.ToString());
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.ColumnIndex == 0 && e.RowIndex >= 0) {
+                Employee.Profile profile = new Employee.Profile(userId, this);
+                profile.Size = new Size(900,800);
+                profile.ShowDialog(this);
 
+            }
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.ColumnIndex ==  1 && e.RowIndex >= 0) {
+                EmployeeBL empBL = new EmployeeBL();
+                if (empBL.DeleteEmployee(userId)) {
+                    FillListDynamic();
+                    MessageBox.Show("User deleted successfully!");
+                }
+            }
         }
 
         private void Employees_Load(object sender, EventArgs e)
@@ -72,6 +78,25 @@ namespace UI_HumRes_OneTouch.HR
         {
             AddEmployee addEmployee = new AddEmployee(this);
                 addEmployee.ShowDialog(this);
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            Microsoft.Office.Interop.Excel.Application xcel = new Microsoft.Office.Interop.Excel.Application();
+            xcel.Application.Workbooks.Add(Type.Missing);
+
+            for (int i = 3; i < employeesDataGrid.Columns.Count + 1; i++) {
+                xcel.Cells[1, i - 2] = employeesDataGrid.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < employeesDataGrid.Rows.Count; i++) {
+                for (int j = 2; j < employeesDataGrid.Columns.Count; j++) {
+                    xcel.Cells[i + 2, j - 1] = employeesDataGrid.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            xcel.Columns.AutoFit();
+            xcel.Visible = true;
+
+
         }
     }
 }

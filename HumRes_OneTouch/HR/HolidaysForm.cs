@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using BL_HumanRes_OneTouch;
+using BO_HumRes_OneTouch;
 
 namespace UI_HumRes_OneTouch.Employee
 {
@@ -21,7 +22,7 @@ namespace UI_HumRes_OneTouch.Employee
         {
             //DataSet dataSet = new DataSet();
             EmployeeBL emp = new EmployeeBL();
-            holidayDataGrid.DataSource = emp.FillHolidatsTable();
+            holidayDataGrid.DataSource = emp.FillHolidatsTableForEmployee(GlobalModel.UserId);
             //holidayDataGrid.Add
             //DataTable dataTable = new DataTable();
 

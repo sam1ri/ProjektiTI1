@@ -52,6 +52,7 @@ namespace UI_HumRes_OneTouch.Employee {
             this.addEmployeeButton.TabIndex = 13;
             this.addEmployeeButton.Text = "Submit";
             this.addEmployeeButton.UseVisualStyleBackColor = false;
+            this.addEmployeeButton.Click += new System.EventHandler(this.addEmployeeButton_Click);
             // 
             // textBox1
             // 

@@ -32,6 +32,7 @@ namespace UI_HumRes_OneTouch.HR
             this.label1 = new System.Windows.Forms.Label();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
             this.addEmployeeButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@ namespace UI_HumRes_OneTouch.HR
             this.employeesDataGrid.ReadOnly = true;
             this.employeesDataGrid.RowHeadersWidth = 51;
             this.employeesDataGrid.RowTemplate.Height = 25;
-            this.employeesDataGrid.Size = new System.Drawing.Size(863, 666);
+            this.employeesDataGrid.Size = new System.Drawing.Size(1752, 933);
             this.employeesDataGrid.TabIndex = 1;
             this.employeesDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -73,7 +74,7 @@ namespace UI_HumRes_OneTouch.HR
             this.addEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployeeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addEmployeeButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.addEmployeeButton.Location = new System.Drawing.Point(725, 36);
+            this.addEmployeeButton.Location = new System.Drawing.Point(1604, 36);
             this.addEmployeeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addEmployeeButton.Name = "addEmployeeButton";
             this.addEmployeeButton.Size = new System.Drawing.Size(167, 40);
@@ -82,11 +83,29 @@ namespace UI_HumRes_OneTouch.HR
             this.addEmployeeButton.UseVisualStyleBackColor = false;
             this.addEmployeeButton.Click += new System.EventHandler(this.OnAddEmployeeButtonClick);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Location = new System.Drawing.Point(1418, 36);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Export";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 788);
+            this.ClientSize = new System.Drawing.Size(1793, 1055);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.addEmployeeButton);
             this.Controls.Add(this.employeesDataGrid);
             this.Controls.Add(this.label1);
@@ -106,5 +125,6 @@ namespace UI_HumRes_OneTouch.HR
         public System.Windows.Forms.DataGridView employeesDataGrid;
         private System.Windows.Forms.Button addNew;
         private System.Windows.Forms.Button addEmployeeButton;
+        private System.Windows.Forms.Button button1;
     }
 }

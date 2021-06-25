@@ -44,13 +44,13 @@ namespace UI_HumRes_OneTouch.Employee
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(32, 260);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -67,7 +67,6 @@ namespace UI_HumRes_OneTouch.Employee
             // 
             // textBox2
             // 
-            this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox2.Location = new System.Drawing.Point(32, 363);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -96,11 +95,11 @@ namespace UI_HumRes_OneTouch.Employee
             // 
             // textBox4
             // 
-            this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox4.Location = new System.Drawing.Point(32, 153);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(292, 39);
             this.textBox4.TabIndex = 1;
             // 
@@ -134,7 +133,6 @@ namespace UI_HumRes_OneTouch.Employee
             // 
             // textBox5
             // 
-            this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox5.Location = new System.Drawing.Point(467, 153);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -144,7 +142,6 @@ namespace UI_HumRes_OneTouch.Employee
             // 
             // textBox6
             // 
-            this.textBox6.Enabled = false;
             this.textBox6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox6.Location = new System.Drawing.Point(467, 260);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -163,7 +160,6 @@ namespace UI_HumRes_OneTouch.Employee
             // 
             // textBox7
             // 
-            this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox7.Location = new System.Drawing.Point(467, 363);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -184,6 +180,7 @@ namespace UI_HumRes_OneTouch.Employee
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox5);
@@ -198,10 +195,27 @@ namespace UI_HumRes_OneTouch.Employee
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(238, 152);
+            this.panel1.Location = new System.Drawing.Point(25, 46);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 518);
             this.panel1.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button2.Location = new System.Drawing.Point(616, 458);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 40);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.editProfileClick);
             // 
             // button1
             // 
@@ -224,10 +238,11 @@ namespace UI_HumRes_OneTouch.Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 852);
+            this.ClientSize = new System.Drawing.Size(861, 602);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Profile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -253,5 +268,6 @@ namespace UI_HumRes_OneTouch.Employee
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

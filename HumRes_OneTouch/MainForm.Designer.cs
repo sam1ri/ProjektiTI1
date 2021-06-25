@@ -30,6 +30,7 @@ namespace UI_HumRes_OneTouch
         private void InitializeComponent()
         {
             this.sidebar = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.ProfileLink = new System.Windows.Forms.Button();
             this.contractLink = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@ namespace UI_HumRes_OneTouch
             // 
             this.sidebar.BackColor = System.Drawing.SystemColors.Highlight;
             this.sidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sidebar.Controls.Add(this.button1);
             this.sidebar.Controls.Add(this.ProfileLink);
             this.sidebar.Controls.Add(this.contractLink);
             this.sidebar.Controls.Add(this.logoutButton);
@@ -52,8 +54,26 @@ namespace UI_HumRes_OneTouch
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(175, 761);
+            this.sidebar.Size = new System.Drawing.Size(219, 615);
             this.sidebar.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Location = new System.Drawing.Point(0, 252);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(217, 63);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Stats";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // ProfileLink
             // 
@@ -66,7 +86,7 @@ namespace UI_HumRes_OneTouch
             this.ProfileLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProfileLink.Name = "ProfileLink";
             this.ProfileLink.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.ProfileLink.Size = new System.Drawing.Size(173, 63);
+            this.ProfileLink.Size = new System.Drawing.Size(217, 63);
             this.ProfileLink.TabIndex = 0;
             this.ProfileLink.Text = "Profile";
             this.ProfileLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -84,7 +104,7 @@ namespace UI_HumRes_OneTouch
             this.contractLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.contractLink.Name = "contractLink";
             this.contractLink.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.contractLink.Size = new System.Drawing.Size(173, 63);
+            this.contractLink.Size = new System.Drawing.Size(217, 63);
             this.contractLink.TabIndex = 1;
             this.contractLink.Text = "Manage Contracts";
             this.contractLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,7 +118,7 @@ namespace UI_HumRes_OneTouch
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.logoutButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.logoutButton.Location = new System.Drawing.Point(-1, 711);
+            this.logoutButton.Location = new System.Drawing.Point(-1, 565);
             this.logoutButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
@@ -120,7 +140,7 @@ namespace UI_HumRes_OneTouch
             this.HolidaysLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HolidaysLink.Name = "HolidaysLink";
             this.HolidaysLink.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.HolidaysLink.Size = new System.Drawing.Size(173, 63);
+            this.HolidaysLink.Size = new System.Drawing.Size(217, 63);
             this.HolidaysLink.TabIndex = 0;
             this.HolidaysLink.Text = "Holidays";
             this.HolidaysLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,7 +158,7 @@ namespace UI_HumRes_OneTouch
             this.employeesLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employeesLink.Name = "employeesLink";
             this.employeesLink.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.employeesLink.Size = new System.Drawing.Size(173, 63);
+            this.employeesLink.Size = new System.Drawing.Size(217, 63);
             this.employeesLink.TabIndex = 0;
             this.employeesLink.Text = "Employees";
             this.employeesLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,14 +175,14 @@ namespace UI_HumRes_OneTouch
             this.mainPanel.Location = new System.Drawing.Point(175, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(915, 761);
+            this.mainPanel.Size = new System.Drawing.Size(804, 615);
             this.mainPanel.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 761);
+            this.ClientSize = new System.Drawing.Size(979, 615);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -188,5 +208,6 @@ namespace UI_HumRes_OneTouch
         private System.Windows.Forms.Button employeesLink;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button contractLink;
+        private System.Windows.Forms.Button button1;
     }
 }

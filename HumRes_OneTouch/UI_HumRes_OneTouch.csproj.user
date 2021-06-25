@@ -19,6 +19,9 @@
     <Compile Update="Employee\RequestHoliday.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="HR\AddContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="HR\HolidaysForm.cs">
       <SubType>Form</SubType>
     </Compile>
