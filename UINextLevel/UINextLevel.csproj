@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9F82ED3-5CD0-4047-812B-F096B6F9B85D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UINextLevel</RootNamespace>
+    <AssemblyName>UINextLevel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\LoginForm.Designer.cs" />
+    <Compile Include="Employee\AddEducation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddEducation.Designer.cs" />
+    <Compile Include="Employee\AddExperience.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddExperience.Designer.cs" />
+    <Compile Include="Employee\AddSkill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddSkill.Designer.cs" />
+    <Compile Include="Employee\Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Contract.Designer.cs" />
+    <Compile Include="Employee\Holidays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Holidays.Designer.cs" />
+    <Compile Include="Employee\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Profile.Designer.cs" />
+    <Compile Include="Employee\RequestHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\RequestHoliday.Designer.cs" />
+    <Compile Include="Employee\ViewCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\ViewCV.Designer.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\AddContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\AddContract.Designer.cs" />
+    <Compile Include="HR\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\AddEmployee.Designer.cs" />
+    <Compile Include="HR\Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\Contract.Designer.cs" />
+    <Compile Include="HR\Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\Employees.Designer.cs" />
+    <Compile Include="HR\HolidaysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\HolidaysForm.Designer.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\LoginForm.resx" />
+    <EmbeddedResource Include="Common\LoginForm.sq-AL.resx" />
+    <EmbeddedResource Include="Common\LoginForm.sq.resx" />
+    <EmbeddedResource Include="Employee\AddEducation.resx" />
+    <EmbeddedResource Include="Employee\AddExperience.resx" />
+    <EmbeddedResource Include="Employee\AddExperience.sq.resx" />
+    <EmbeddedResource Include="Employee\AddSkill.resx" />
+    <EmbeddedResource Include="Employee\AddSkill.sq.resx" />
+    <EmbeddedResource Include="Employee\Contract.resx" />
+    <EmbeddedResource Include="Employee\Contract.sq.resx" />
+    <EmbeddedResource Include="Employee\Holidays.resx" />
+    <EmbeddedResource Include="Employee\Holidays.sq.resx" />
+    <EmbeddedResource Include="Employee\Profile.resx" />
+    <EmbeddedResource Include="Employee\Profile.sq.resx" />
+    <EmbeddedResource Include="Employee\RequestHoliday.resx" />
+    <EmbeddedResource Include="Employee\RequestHoliday.sq.resx" />
+    <EmbeddedResource Include="Employee\ViewCV.resx" />
+    <EmbeddedResource Include="Employee\ViewCV.sq.resx" />
+    <EmbeddedResource Include="HR\AddContract.resx" />
+    <EmbeddedResource Include="HR\AddContract.sq.resx" />
+    <EmbeddedResource Include="HR\AddEmployee.resx" />
+    <EmbeddedResource Include="HR\AddEmployee.sq.resx" />
+    <EmbeddedResource Include="HR\Contract.resx" />
+    <EmbeddedResource Include="HR\Contract.sq.resx" />
+    <EmbeddedResource Include="HR\Employees.resx" />
+    <EmbeddedResource Include="HR\Employees.sq.resx" />
+    <EmbeddedResource Include="HR\HolidaysForm.resx" />
+    <EmbeddedResource Include="HR\HolidaysForm.sq.resx" />
+    <EmbeddedResource Include="MainForm.resx" />
+    <EmbeddedResource Include="MainForm.sq.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdditionalUI\AdditionalUI.csproj">
+      <Project>{e58585a9-0d35-426b-994a-7c8d68eadb71}</Project>
+      <Name>AdditionalUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL_HumanRes_OneTouch\BL_HumanRes_OneTouch.csproj">
+      <Project>{32600d27-b9bc-4ab5-a7ec-57e78079a23e}</Project>
+      <Name>BL_HumanRes_OneTouch</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

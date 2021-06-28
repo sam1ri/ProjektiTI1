@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI_HumRes_OneTouch.Employee {
-    public partial class AddCV : Form {
-        public AddCV() {
+namespace UINextLevel {
+    public partial class Form1 : Form {
+        public Form1() {
             InitializeComponent();
         }
     }

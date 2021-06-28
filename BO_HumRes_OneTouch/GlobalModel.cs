@@ -8,6 +8,8 @@ namespace BO_HumRes_OneTouch
     {
         private static int userId; // to be removed the initial value
 
+        public static string Language = "sq-AL";
+
         public static string Name { get; set; }
         public static string LastName { get; set; }
         public static DateTime BirthDate { get; set; }
